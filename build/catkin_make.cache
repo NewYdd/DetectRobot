@@ -1,0 +1,2 @@
+movement
+-DCATKIN_DEVEL_PREFIX=/home/dtrobot/DetectRobot/devel -DCMAKE_INSTALL_PREFIX=/home/dtrobot/DetectRobot/install -G Unix Makefiles

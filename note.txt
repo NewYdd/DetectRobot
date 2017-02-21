@@ -1,0 +1,5 @@
+Here is the work note 
+
+2017/02/21/  10:04:23  :have finished the base_twist && the pid_velocity 
+                       problem : the kp,ki,kd real value ?  //the pub_rate_default can't decide ? 
+                                 the queue of the message?

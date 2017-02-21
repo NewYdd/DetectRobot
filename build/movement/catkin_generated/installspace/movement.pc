@@ -1,0 +1,8 @@
+prefix=/home/dtrobot/DetectRobot/install
+
+Name: movement
+Description: Description of movement
+Version: 0.0.0
+Cflags: -I/home/dtrobot/DetectRobot/install/include
+Libs: -L/home/dtrobot/DetectRobot/install/lib 
+Requires: 

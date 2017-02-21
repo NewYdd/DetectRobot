@@ -1,0 +1,10 @@
+<launch>
+	 
+	<node name="baseTwist" pkg="movement" type="baseTwist2_node" output="screen"/>
+    <node name="pubvel"     pkg="movement" type="pubvel_node" />
+    <node name="pid_velocity" pkg="movement" type="pidVelocity_node" output="screen" 
+     launch-prefix="xterm -e" /> 
+  <!-- Load controller config -->
+  <rosparam command="load" file="$(find movement)/robot.yaml" />
+
+</launch>

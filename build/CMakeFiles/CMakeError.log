@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4248548827/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4248548827.dir/build.make CMakeFiles/cmTryCompileExec4248548827.dir/build
+make[1]: Entering directory `/home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4248548827.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4248548827.dir/CheckSymbolExists.c.o   -c /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4248548827
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4248548827.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4248548827.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4248548827 -rdynamic 
+CMakeFiles/cmTryCompileExec4248548827.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec4248548827] Error 1
+make[1]: Leaving directory `/home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec4248548827/fast] Error 2
+
+File /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1872136788/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1872136788.dir/build.make CMakeFiles/cmTryCompileExec1872136788.dir/build
+make[1]: Entering directory `/home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1872136788.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1872136788.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1872136788
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1872136788.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1872136788.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1872136788 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1872136788] Error 1
+make[1]: Leaving directory `/home/dtrobot/DetectRobot/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1872136788/fast] Error 2
+
+
